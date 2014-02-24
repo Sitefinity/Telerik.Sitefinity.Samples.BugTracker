@@ -1,0 +1,15 @@
+﻿@using Telerik.Web.Mvc.UI
+<!DOCTYPE html />
+<html>
+<head>
+    @Html.Telerik().StyleSheetRegistrar().DefaultGroup(group => group.Add("telerik.common.min.css").Add("telerik.windows7.min.css"))
+</head>
+<body>
+    <h1>
+        Bug tracker
+    </h1>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

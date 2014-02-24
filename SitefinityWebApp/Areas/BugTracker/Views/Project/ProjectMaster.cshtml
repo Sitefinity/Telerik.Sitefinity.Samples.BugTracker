@@ -1,0 +1,17 @@
+﻿@using Telerik.Sitefinity.Model
+@using Telerik.Sitefinity.DynamicModules.Model;
+@model IQueryable<DynamicContent>
+@{
+    Layout = "~/Areas/BugTracker/Views/Shared/BugTrackerLayout.cshtml";
+}
+<h2>
+    Projects</h2>
+Select a project:
+<ul>
+    @foreach (var project in Model)
+    {
+        <li>
+            @Html.ActionLink(project.GetValue("Title").ToString(), "Index", "Bug", new { id = project.Id }, null)
+        </li>
+    }
+</ul>

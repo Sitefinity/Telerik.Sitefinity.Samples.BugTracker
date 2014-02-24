@@ -1,0 +1,19 @@
+﻿@using Telerik.Web.Mvc.UI
+@using Telerik.Sitefinity.Model
+@using Telerik.Sitefinity.DynamicModules.Model;
+@model IQueryable<DynamicContent>
+@{
+    Layout = "~/Areas/BugTracker/Views/Shared/BugTrackerLayout.cshtml";
+}
+<h2>
+    Bugs</h2>
+<div>
+    @Html.ActionLink("Log new bug", "CreateBug", "Bug", new { id = this.ViewContext.RouteData.Values["id"] }, null)
+</div>
+@(Html.Telerik().Grid(Model)
+                    .Name("Grid")
+                    .Columns(columns =>
+                    {
+                        columns.Template(b => @Html.Raw(b.GetValue("Title").ToString())).Title("Bug title");
+                    }))
+@(Html.Telerik().ScriptRegistrar())

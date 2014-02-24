@@ -1,0 +1,40 @@
+﻿@using Telerik.Web.Mvc.UI
+@using Telerik.Sitefinity.Model
+@using Telerik.Sitefinity.DynamicModules.Model;
+@model DynamicContent
+@{
+    Layout = "~/Areas/BugTracker/Views/Shared/BugTrackerLayout.cshtml";
+}
+<h2>
+    Create a bug</h2>
+@using (@Html.BeginForm("SaveBug", "Bug", new { id = this.ViewContext.RouteData.Values["id"] }, System.Web.Mvc.FormMethod.Post))
+{
+    <fieldset>
+        <legend>Create a bug </legend>
+        <ul>
+            <li>
+                <label for="Title">
+                    Title:
+                </label>
+                <input type="text" name="Title" />
+            </li>
+            <li>
+                <label for="Description">
+                    Description:
+                </label>
+                <textarea name="Description"></textarea>
+            </li>
+            <li>
+                <label for="Priority">
+                    Priority:
+                </label>
+                <select name="Priority">
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </li>
+        </ul>
+    </fieldset>
+    <input type="submit" value="Save" />
+}

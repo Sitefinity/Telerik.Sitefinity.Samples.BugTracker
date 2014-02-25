@@ -250,6 +250,9 @@
       <HintPath>C:\Users\dabour\AppData\Local\Telerik.Sitefinity.SDK\Dependencies\Telerik.Web.Design.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="Telerik.Web.Mvc">
+      <HintPath>..\Dependencies\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Web.UI, Version=2013.3.1114.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4">
       <HintPath>C:\Users\dabour\AppData\Local\Telerik.Sitefinity.SDK\Dependencies\Telerik.Web.UI.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>

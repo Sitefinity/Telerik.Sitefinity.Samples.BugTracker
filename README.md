@@ -27,6 +27,13 @@ You need to attach the database backup files to your SQL Server. To do this:
 4. Click _OK_.
 
 
+### Prerequisites
+
+Clear the NuGet cache files. To do this:
+
+1. In Windows Explorer, open the **%localappdata%\NuGet\Cache** folder.
+2. Select all files and delete them.
+
 ### Installation instructions: SDK Samples from GitHub
 
 

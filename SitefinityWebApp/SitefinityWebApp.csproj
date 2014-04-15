@@ -72,15 +72,15 @@
     <Reference Include="DirectShowLib-2005">
       <HintPath>packages\DirectShowLib-2005.2.1.0.0\lib\DirectShowLib-2005.dll</HintPath>
     </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="DocumentFormat.OpenXml">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>packages\DocumentFormat.OpenXml.2.0.5022.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <HintPath>packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="LinqToTwitter">
-      <HintPath>packages\linqtotwitterNET40.2.1.8.0\lib\net40\LinqToTwitter.dll</HintPath>
+      <HintPath>packages\linqtotwitterNET40.2.1.9.0\lib\net40\LinqToTwitter.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CompilerServices.AsyncTargetingPack.Net4">
       <HintPath>packages\Microsoft.CompilerServices.AsyncTargetingPack.1.0.1\lib\net40\Microsoft.CompilerServices.AsyncTargetingPack.Net4.dll</HintPath>

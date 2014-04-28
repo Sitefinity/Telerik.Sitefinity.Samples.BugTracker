@@ -9,10 +9,6 @@ using System.Resources;
 [assembly: AssemblyTitle("Sitefinity Web Application")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Telerik")]
-[assembly: AssemblyProduct("Telerik Sitefinity CMS")]
-[assembly: AssemblyCopyright("Copyright © Telerik 2011")]
-[assembly: AssemblyTrademark("Sitefinity")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -33,6 +29,6 @@ using System.Resources;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("4.3.1873.0")]
-[assembly: AssemblyFileVersion("4.3.1873.0")]
+[assembly: AssemblyVersion("7.0.5100.0")]
+[assembly: AssemblyFileVersion("7.0.5100.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]

@@ -8,7 +8,7 @@ The Bug Tracker sample demonstrates how to use Sitefinity together with MVC and 
 
 ### Requirements
 
-* Sitefinity 6.3 license
+* Sitefinity license
 
 * .NET Framework 4
 

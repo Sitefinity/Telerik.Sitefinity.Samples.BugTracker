@@ -1,6 +1,8 @@
 Telerik.Sitefinity.Samples.BugTracker
 =====================================
 
+[![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.BugTracker.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.BugTracker.CI/)
+
 ## Bug Tracker sample
 
 The Bug Tracker sample demonstrates how to use Sitefinity together with MVC and Razor web pages.
@@ -48,7 +50,7 @@ The project refers to the following NuGet packages:
 
 *	Telerik.Sitefinity.All.nupkg
 
-You can find the packages in the official [Sitefinity Nuget Server](http://nuget.sitefinity.com).
+You can find the packages in the official [Sitefinity NuGet Server](http://nuget.sitefinity.com).
 
 ### Login
 

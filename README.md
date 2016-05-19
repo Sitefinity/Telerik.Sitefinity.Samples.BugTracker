@@ -1,16 +1,16 @@
-Telerik.Sitefinity.Samples.BugTracker
+Progress.Sitefinity.Samples.BugTracker
 =====================================
 
 [![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.BugTracker.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.BugTracker.CI/)
 
 ## Bug Tracker sample
 
-The Bug Tracker sample demonstrates how to use Sitefinity together with MVC and Razor web pages.
+The Bug Tracker sample demonstrates how to use Sitefinity CMS together with MVC and Razor web pages.
 
 
 ### Requirements
 
-* Sitefinity license
+* Sitefinity CMS license
 * .NET Framework 4.5
 * Visual Studio 2012
 * Microsoft SQL Server 2008R2 or later versions
@@ -45,17 +45,17 @@ Clear the NuGet cache files. To do this:
 2. Modify the **connectionString** value to match your server address.
 3. Build the solution.
 
-For version-specific details about the required Sitefinity NuGet packages for this sample application, click on [Releases](https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.BugTracker/releases).
+For version-specific details about the required Sitefinity CMS NuGet packages for this sample application, click on [Releases](https://github.com/Sitefinity-SDK/Telerik.Sitefinity.Samples.BugTracker/releases).
 
 
 ### Login
 
-To login to Sitefinity backend, use the following credentials:  
+To login into the Sitefinity CMS backend, use the following credentials:  
 **Username:** admin  
 **Password:** password
 
 
 ### Additional resources
-Sitefinity documentation  
-* [Develop: Use and extend Sitefinity functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)
+Progress Sitefinity CMS Documentation  
+* [Develop: Use and extend Sitefinity CMS functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)
 * [Tutorial: Create a bug tracker application](http://docs.sitefinity.com/tutorial-create-a-bug-tracker-application)

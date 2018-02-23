@@ -15,13 +15,13 @@
         @DataResolver.Resolve(@Model.Item.DataItem, "Author", null)
     </div>
 
-    <div @Html.InlineEditingFieldAttributes("Description", "LongText")>@Html.Raw(Model.Item.Fields.Description)</div>
+    <div @Html.InlineEditingFieldAttributes("Description", "LongText")>@Html.HtmlSanitize((string)Model.Item.Fields.Description)</div>
 
     <video src="@Html.Raw(Model.MediaUrl)" controls="controls" width="@Model.Width" height="@Model.Height"></video>
 
     @if (ViewBag.ItemIndex != null)
     {
-        <div class="sf-Gallery-navigation text-center">
+        <div class="m-bottom-lg text-center">
             @{
                 var previousItemIndex = ViewBag.ItemIndex == 1 ? Model.TotalItemsCount : ViewBag.ItemIndex - 1;
                 var nextItemIndex = ViewBag.ItemIndex == Model.TotalItemsCount ? 1 : ViewBag.ItemIndex + 1;
@@ -36,7 +36,7 @@
 
             @if (Model.PreviousItem != null || Model.NextItem != null)
             {
-                @Html.Raw(string.Format(Html.Resource("IndexOfTotal"), ViewBag.ItemIndex, Model.TotalItemsCount));
+                @Html.HtmlSanitize((string)string.Format(Html.Resource("IndexOfTotal"), ViewBag.ItemIndex, Model.TotalItemsCount));
             }
 
             @if (Model.NextItem != null) 
@@ -49,9 +49,12 @@
 
         @Html.ActionLink(Html.Resource("BackToAllVideos"), "Index")
     }
-
-    @if (Model.EnableSocialSharing)
-    {
-        @Html.SocialShareOptions()
+    
+    @{        
+        if (Model.EnableSocialSharing)
+        {
+            var item = Model.Item.DataItem as Telerik.Sitefinity.Model.IHasTitle;
+            @Html.SocialShareOptions(item);
+        }
     }
 </div>

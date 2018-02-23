@@ -3,7 +3,7 @@ Telerik.Sitefinity.Samples.BugTracker
 
 [![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.BugTracker.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.BugTracker.CI/)
 
-## Bug Tracker sample
+## Bug Tracker sample 
 
 The Bug Tracker sample demonstrates how to use Sitefinity together with MVC and Razor web pages.
 

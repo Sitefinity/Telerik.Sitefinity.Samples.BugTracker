@@ -1,7 +1,7 @@
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Resources;
+using System.Runtime.InteropServices;
+using Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers.Attributes;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Progress")]
 [assembly: AssemblyProduct("Progress Sitefinity CMS")]
-[assembly: AssemblyCopyright("© 2016 Telerik AD. All rights reserved.")]
+[assembly: AssemblyCopyright("© 2018 Telerik AD. All rights reserved.")]
 [assembly: AssemblyTrademark("Sitefinity")]
 [assembly: AssemblyCulture("")]
 
@@ -33,12 +33,10 @@ using System.Resources;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("7.0.5100.0")]
-[assembly: AssemblyFileVersion("7.0.5100.0")]
+[assembly: AssemblyVersion("10.2.6600.0")]
+[assembly: AssemblyFileVersion("10.2.6600.0")]
 [assembly: NeutralResourcesLanguageAttribute("en")]
 
 
-
-[assembly: Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers.Attributes.ControllerContainer]
-
-[assembly: Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Controllers.Attributes.ResourcePackage]
+[assembly: ControllerContainer]
+[assembly: ResourcePackage]

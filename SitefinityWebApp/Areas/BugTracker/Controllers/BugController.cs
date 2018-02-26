@@ -14,8 +14,7 @@ namespace SitefinityWebApp.Areas.BugTracker.Controllers
 {
     public class BugController : Controller
     {
-        private Type bugType = TypeResolutionService.ResolveType("Telerik.Sitefinity.DynamicTypes.Model.BugTracking.Bug");
-        private Type projectType = TypeResolutionService.ResolveType("Telerik.Sitefinity.DynamicTypes.Model.BugTracking.Project");
+        #region Actions
 
         public ActionResult Index()
         {
@@ -23,7 +22,7 @@ namespace SitefinityWebApp.Areas.BugTracker.Controllers
 
             DynamicModuleManager dynamicModuleManager = DynamicModuleManager.GetManager();
 
-            Guid masterProjectId = dynamicModuleManager.GetDataItem(this.projectType, projectId).OriginalContentId;
+            Guid masterProjectId = dynamicModuleManager.GetDataItem(BugController.projectType, projectId).OriginalContentId;
 
             return View("BugMaster", this.GetBugsByProject(masterProjectId));
         }
@@ -44,43 +43,52 @@ namespace SitefinityWebApp.Areas.BugTracker.Controllers
             return this.RedirectToAction("Index", "Bug", new { id = projectId });
         }
 
-        public void SaveBugWorker(object[] args)
+        #endregion
+
+        #region Private methods
+
+        private void SaveBugWorker(object[] args)
         {
-            BugModel bug = args.SingleOrDefault(o => o.GetType() == typeof(BugModel)) as BugModel;
-            Guid liveProjectId = new Guid(args.SingleOrDefault(o => o.GetType() == typeof(Guid)).ToString());
+            var bugModel = args.SingleOrDefault(o => o.GetType() == typeof(BugModel)) as BugModel;
+            var liveProjectId = new Guid(args.SingleOrDefault(o => o.GetType() == typeof(Guid)).ToString());
 
-            if (bug == null)
-            {
+            if (bugModel == null || liveProjectId == Guid.Empty)
                 return;
-            }
 
-            if (liveProjectId == Guid.Empty)
-            {
-                return;
-            }
+            var dynamicModuleManager = DynamicModuleManager.GetManager();
 
-            DynamicModuleManager dynamicModuleManager = DynamicModuleManager.GetManager();
+            Guid masterProjectId = dynamicModuleManager.GetDataItem(BugController.projectType, liveProjectId).OriginalContentId;
 
-            Guid masterProjectId = dynamicModuleManager.GetDataItem(this.projectType, liveProjectId).OriginalContentId;
-
-            var newBug = dynamicModuleManager.CreateDataItem(this.bugType);
-            newBug.SetValue("Title", bug.Title);
-            newBug.UrlName = Regex.Replace(bug.Title.ToLower(), @"[^\w\-\!\$\'\(\)\=\@\d_]+", "-");
-            newBug.SetValue("Description", bug.Description);
-            newBug.SetValue("Priority", bug.Priority);
+            var newBug = dynamicModuleManager.CreateDataItem(BugController.bugType);
+            newBug.SetValue("Title", bugModel.Title);
+            newBug.UrlName = Regex.Replace(bugModel.Title.ToLower(), @"[^\w\-\!\$\'\(\)\=\@\d_]+", "-");
+            newBug.SetValue("Description", bugModel.Description);
+            newBug.SetValue("Priority", bugModel.Priority);
             newBug.SetValue("SystemParentId", masterProjectId);
             newBug.ApprovalWorkflowState = "Draft";
 
+            dynamicModuleManager.SaveChanges();
+            dynamicModuleManager.Lifecycle.Publish(newBug);
             dynamicModuleManager.SaveChanges();
         }
 
         private IQueryable<DynamicContent> GetBugsByProject(Guid projectId)
         {
-            DynamicModuleManager dynamicModuleManager = DynamicModuleManager.GetManager();
-
-            var bugs = dynamicModuleManager.GetDataItems(this.bugType).Where(d => d.SystemParentId == projectId && d.Status == ContentLifecycleStatus.Live);
+            var dynamicModuleManager = DynamicModuleManager.GetManager();
+            var bugs = dynamicModuleManager
+                .GetDataItems(BugController.bugType)
+                .Where(d => d.SystemParentId == projectId && d.Status == ContentLifecycleStatus.Live);
 
             return bugs;
         }
+
+        #endregion
+
+        #region Fields and constants
+
+        private static Type bugType = TypeResolutionService.ResolveType("Telerik.Sitefinity.DynamicTypes.Model.BugTracking.Bug");
+        private static Type projectType = TypeResolutionService.ResolveType("Telerik.Sitefinity.DynamicTypes.Model.BugTracking.Project");
+
+        #endregion
     }
 }

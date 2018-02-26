@@ -65,7 +65,7 @@ namespace SitefinityWebApp.Areas.BugTracker.Controllers
             newBug.SetValue("Description", bugModel.Description);
             newBug.SetValue("Priority", bugModel.Priority);
             newBug.SetValue("SystemParentId", masterProjectId);
-            newBug.ApprovalWorkflowState = "Draft";
+            newBug.ApprovalWorkflowState = "Published";
 
             dynamicModuleManager.SaveChanges();
             dynamicModuleManager.Lifecycle.Publish(newBug);

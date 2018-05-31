@@ -1,9 +1,7 @@
 Progress.Sitefinity.Samples.BugTracker
 =====================================
 
-### This repository is not automatically upgraded to latest Sitefintiy version. The repository is monitored for pull requests and fixes. The latest official version of Sitefinity that supports this sample is 10.2. Be aware that using a higher version could cause unexpected behavior. If you successfully upgrade the example to a greater version, please share your work with the community by submitting your changes via pull request.
-
-[![Build Status](http://sdk-jenkins-ci.cloudapp.net/buildStatus/icon?job=Telerik.Sitefinity.Samples.BugTracker.CI)](http://sdk-jenkins-ci.cloudapp.net/job/Telerik.Sitefinity.Samples.BugTracker.CI/)
+### Latest supported version: Sitefinity CMS 11.0.6700.0
 
 ## Bug Tracker sample
 
@@ -12,11 +10,9 @@ The Bug Tracker sample demonstrates how to use Sitefinity CMS together with MVC 
 
 ### Requirements
 
-* Sitefinity CMS license
-* .NET Framework 4.5
-* Visual Studio 2012
-* Microsoft SQL Server 2008R2 or later versions
+You must have a Sitefinity CMS license
 
+For more information, see the [System requirements](https://docs.sitefinity.com/system-requirements) for the  respective Sitefinity CMS version.
 
 ### Prerequisites
 

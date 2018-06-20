@@ -1,7 +1,7 @@
 Progress.Sitefinity.Samples.BugTracker
 =====================================
 
->### Latest supported version: Sitefinity CMS 11.0.6700.0
+>**Latest supported version**: Sitefinity CMS 11.0.6700.0
 
 ### Overview
 

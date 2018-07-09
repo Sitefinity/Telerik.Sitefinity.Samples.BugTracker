@@ -3,6 +3,8 @@ Progress.Sitefinity.Samples.BugTracker
 
 >**Latest supported version**: Sitefinity CMS 11.0.6700.0
 
+>**Documentation articles**: [Tutorial: Create a bug tracker application](http://docs.sitefinity.com/tutorial-create-a-bug-tracker-application)
+
 ### Overview
 
 The Bug Tracker sample demonstrates how to use Sitefinity CMS together with MVC and Razor web pages.
@@ -51,6 +53,4 @@ The Bug Tracker sample demonstrates how to use Sitefinity CMS together with MVC 
  **Password:** password
 
 ### Additional resources
-Progress Sitefinity CMS Documentation:  
-* [Develop: Use and extend Sitefinity CMS functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)
-* [Tutorial: Create a bug tracker application](http://docs.sitefinity.com/tutorial-create-a-bug-tracker-application)
+Progress Sitefinity CMS Documentation: [Develop: Use and extend Sitefinity CMS functionality](http://docs.sitefinity.com/develop-create-and-manage-website-content)

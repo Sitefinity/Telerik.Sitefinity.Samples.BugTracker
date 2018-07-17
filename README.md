@@ -1,4 +1,4 @@
-Progress.Sitefinity.Samples.BugTracker
+BugTracker sample module
 =====================================
 
 >**Latest supported version**: Sitefinity CMS 11.0.6700.0
